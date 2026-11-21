@@ -4,73 +4,54 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer
-      style={{
-        backgroundColor: "#0f172a", // dark slate
-        color: "#f8fafc", // light text
-        padding: "3rem 0",
-        fontFamily: "Segoe UI, sans-serif",
-      }}
-    >
+    <footer className="footer-bar py-4">
       <Container>
-        <Row className="align-items-center">
-          {/* Left Column */}
-          <Col md={4} className="mb-4 mb-md-0">
-            <h3
-              style={{
-                color: "#38bdf8", // sky blue
-                fontWeight: "700",
-                marginBottom: "0.5rem",
-              }}
-            >
-              Mosharaf Hossain
-            </h3>
-            <p style={{ color: "#94a3b8", margin: 0 }}>Frontend Developer</p>
+        <Row className="align-items-center gy-3">
+          <Col md={4} className="text-center text-md-start">
+            <span className="brand-mark">
+              M<span>H</span>
+            </span>
+            <p className="mb-0 mono" style={{ color: "var(--bs-secondary-color)", fontSize: "0.85rem" }}>
+              Full-Stack Software Engineer
+            </p>
           </Col>
 
-          {/* Center Column: Social Icons */}
-          <Col md={4} className="mb-4 mb-md-0 text-center">
+          <Col md={4} className="text-center">
             <div className="d-flex justify-content-center gap-4">
               <a
+                className="social-link"
                 href="https://github.com/MosharafMehedi"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "#f8fafc", fontSize: "1.5rem" }}
+                aria-label="GitHub"
               >
                 <i className="bi bi-github"></i>
               </a>
               <a
+                className="social-link"
                 href="https://www.linkedin.com/in/mosharaf-hossain-102847277/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "#f8fafc", fontSize: "1.5rem" }}
+                aria-label="LinkedIn"
               >
                 <i className="bi bi-linkedin"></i>
               </a>
-              <a href="#" style={{ color: "#f8fafc", fontSize: "1.5rem" }}>
-                <i className="bi bi-twitter"></i>
-              </a>
               <a
-                href="https://www.facebook.com/crystal.mosharaf/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#f8fafc", fontSize: "1.5rem" }}
+                className="social-link"
+                href="mailto:mosharafhossain4701@gmail.com"
+                aria-label="Email"
               >
-                <i className="bi bi-facebook"></i>
+                <i className="bi bi-envelope-fill"></i>
               </a>
             </div>
           </Col>
 
-          {/* Right Column */}
           <Col md={4} className="text-center text-md-end">
-            <p className="mb-1" style={{ fontSize: "0.9rem" }}>
-              &copy; {currentYear} Mosharaf Hossain. All rights reserved.
+            <p className="mb-0" style={{ fontSize: "0.9rem" }}>
+              &copy; {currentYear} Mosharaf Hossain
             </p>
-            <p
-              className="mb-0"
-              style={{ fontSize: "0.8rem", color: "#64748b" }}
-            >
-              Built with React & Bootstrap
+            <p className="mb-0" style={{ fontSize: "0.8rem", color: "var(--bs-secondary-color)" }}>
+              Built with React &amp; Bootstrap
             </p>
           </Col>
         </Row>

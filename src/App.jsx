@@ -1,26 +1,33 @@
-import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "./App.css";
+import "./theme.css";
+
+import useTheme from "./useTheme";
 import Header from "./Component/Header";
 import Hero from "./Component/Hero";
 import About from "./Component/About";
-import Skills from "./Component/Skill";
-import Contact from "./Component/Contract";
-import Footer from "./Component/Footer";
+import Experience from "./Component/Experience";
+import Skills from "./Component/Skills";
 import Projects from "./Component/Projects";
+import Education from "./Component/Education";
+import Contact from "./Component/Contact";
+import Footer from "./Component/Footer";
 
 function App() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <>
-      <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Header theme={theme} onToggleTheme={toggleTheme} />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Education />
+        <Contact />
+      </main>
       <Footer />
     </>
   );

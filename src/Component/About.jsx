@@ -2,88 +2,62 @@ import { Container, Row, Col, Image, Button } from "react-bootstrap";
 
 const About = () => {
   return (
-    <section id="about" className="py-5 bg-light">
+    <section id="about" className="section-pad section-alt">
       <Container>
-        <h2 className="text-center mb-5">
-          About <span className="text-primary">Me</span>
+        <h2 className="section-title">
+          About <span>Me</span>
         </h2>
 
-        <Row className="align-items-center">
-          <Col md={4} className="mb-4 mb-md-0">
+        <Row className="align-items-center g-5">
+          <Col md={4}>
             <div className="d-flex justify-content-center">
               <Image
                 src="/MResume.png"
                 roundedCircle
-                fluid
-                className="border-border-4 border-primary"
-                style={{ width: "250px", height: "250px", objectFit: "cover" }}
+                className="border border-4"
+                style={{
+                  width: "250px",
+                  height: "250px",
+                  objectFit: "cover",
+                  borderColor: "var(--accent)",
+                }}
+                alt="Mosharaf Hossain"
               />
             </div>
           </Col>
 
           <Col md={8}>
-            <h3 className="mb-4">Who am I?</h3>
-            <p className="lead mb-4">
-              Assalamu Alaikum, My name is Mosharaf Hossain, and I’m a
-              passionate Frontend Developer with a strong foundation in HTML,
-              CSS, JavaScript, and modern frameworks like React.js. I enjoy
-              crafting responsive, user-friendly interfaces and translating
-              design ideas into real-world web experiences. I’m committed to
-              writing clean, maintainable code and continuously improving my
-              skills to stay aligned with the latest frontend trends and best
-              practices. My goal is to create web applications that are not only
-              functional but also visually engaging and accessible.
+            <p className="lead">
+              Hi, I'm Mosharaf, a Junior Software Engineer at Mysoftheaven (BD)
+              Ltd. in Dhaka, Bangladesh. Day to day I build and maintain web
+              applications with Laravel, CodeIgniter, React, and MySQL, and I
+              help design the RESTful APIs that connect them.
+            </p>
+            <p>
+              Outside of work I build my own projects, from a hospital
+              management system with role-based access for patients, doctors,
+              and admins, to a diabetes prediction app with a machine learning
+              model that reaches 96.88% accuracy. I enjoy learning new tools
+              quickly and turning ideas into working products.
+            </p>
+            <p className="mb-4">
+              I'm now looking for my next Software Engineer role, where I can
+              take on more ownership, grow with a strong team, and keep
+              building software that solves real problems. I hold a Bachelor's
+              degree from Bangladesh University of Business and Technology.
             </p>
 
-            <Row className="mb-4">
-              <Col md={6}>
-                <p>
-                  <strong>Name:</strong> Mosharaf Hossain
-                </p>
-                <p>
-                  <strong>Email:</strong> mosharafhossain4701@gmail.com
-                </p>
-              </Col>
-              <Col md={6}>
-                <p>
-                  <strong>Experience:</strong> Fresher
-                </p>
-                <p>
-                  <strong>Location:</strong> Mirpur, Dhaka, Bangladesh
-                </p>
-              </Col>
-              <Col md={6}>
-                <p>
-                  <strong>Education:</strong> Bachelor Degree Complete
-                </p>
-                <p>
-                  <strong>Institute:</strong> Bangladesh University of Business
-                  and Technology
-                </p>
-                <p>
-                  <strong>Phone:</strong> +8801601755316
-                </p>
-              </Col>
-            </Row>
-
-            <div className="resume-actions">
+            <div className="d-flex flex-wrap gap-2">
               <Button
                 variant="primary"
-                size="lg"
-                href="Mosharaf_Resume.pdf"
-                download
-              >
-                Download Resume
-              </Button>
-              <Button
-                variant="outline-primary"
-                size="lg"
                 href="Mosharaf_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ms-2"
               >
                 View Resume
+              </Button>
+              <Button variant="outline-primary" href="#contact">
+                Get In Touch
               </Button>
             </div>
           </Col>
